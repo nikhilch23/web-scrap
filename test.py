@@ -9,10 +9,6 @@ page = urllib2.urlopen(quote_page)
 soup = BeautifulSoup(page, 'html.parser')
 
 
-name = soup.find(string = "SPX:IND")
-print(name)
-
-
 name_box = soup.find('h1', attrs={'class':'companyName__99a4824b'})
 name = name_box.text.strip()
 print(name)
